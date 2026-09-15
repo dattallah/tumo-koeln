@@ -148,9 +148,21 @@ p {
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--line);
+}
+
+/* Blur lives on a pseudo-element rather than .site-header itself: a
+   backdrop-filter on an ancestor turns it into the containing block for
+   position:fixed descendants, which would break the fixed mobile nav
+   below (it would size itself against this 78px bar instead of the
+   viewport and collapse to an invisible sliver). */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(250, 249, 246, 0.85);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
 }
 
 .site-header .container {
@@ -260,6 +272,7 @@ p {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+    box-shadow: var(--shadow);
   }
   .main-nav a {
     padding: 14px 12px;
