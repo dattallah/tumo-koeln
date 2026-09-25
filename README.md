@@ -21,7 +21,8 @@ Inhalte sind zusammengefasst aus tumo.de, techandteach.de/tumo und techandteach.
 
 ## Vor dem Go-Live: TODOs erledigen
 
-Im Quellcode sind mit `TODO`-Badges markierte Platzhalter enthalten – bitte vor Veröffentlichung ausfüllen:
+Der Verein ist noch in Gründung. Die fehlenden Angaben sind auf der Seite mit „In Gründung“-Badges und dem
+Text „Wird nach Abschluss der Vereinsgründung ergänzt.“ gekennzeichnet – nach der Gründung ersetzen:
 
 - **impressum.html** – Vereinsname/Rechtsform, Anschrift, Vorstand, ggf. Registernummer, Kontakt
 - **datenschutz.html** – an tatsächlich genutzte Tools (Formular, Zahlungsdienstleister, Analytics) anpassen
@@ -32,7 +33,7 @@ Im Quellcode sind mit `TODO`-Badges markierte Platzhalter enthalten – bitte vo
 Am schnellsten findest du alle offenen Stellen mit:
 
 ```bash
-grep -rn "TODO\|\[.*ergänzen\|\[.*Platzhalter\|\[Straße\|\[Name" --include="*.html" .
+grep -rn "In Gründung\|in Gründung" --include="*.html" .
 ```
 
 ## Lokal ansehen
